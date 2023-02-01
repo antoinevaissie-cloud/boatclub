@@ -1,0 +1,22 @@
+<div class="main-container">
+  <div class="general-index-container">
+    <div class="general-index-title">
+      <h2>Rent your favorite Boat</h2>
+      <p>rent your boat for a month, a week, ...</p>
+    </div>
+    <div class="general-index-card-container">
+      <% @boats.each do |boat| %>
+        <div class="general-index-card">
+          <div class="general-index-card-img-container">
+            <%= image_tag "https://source.unsplash.com/random/?yacht" %>
+          </div>
+            <div class="general-index-card-description-container">
+              <%= boat.name %>
+              <%= boat.description %>
+              <%= boat.price %>
+            </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -10,3 +10,12 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+a{
+  text-decoration: none;
+}
+.main-container{
+  padding:16px;
+  width:100%;
+  height:100%;
+}

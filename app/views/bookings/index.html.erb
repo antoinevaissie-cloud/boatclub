@@ -1,0 +1,26 @@
+
+<div class="main-container">
+  <div class="general-index-container">
+    <div class="general-index-title">
+      <h2>Your reservation</h2>
+      <p>see your booking details below</p>
+    </div>
+    <div class="general-index-card-container">
+      <% @bookings.each do |booking| %>
+        <% if current_user.id == booking.user_id%>
+          <div class="general-index-card">
+            <div class="general-index-card-img-container">
+              <%= image_tag "https://source.unsplash.com/random/?yacht" %>
+            </div>
+              <div class="general-index-card-description-container">
+                <%= booking.start_date %>
+                <%= booking.end_date %>
+                <%= booking.boat.name %>
+                <%= booking.user.email %>
+              </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
